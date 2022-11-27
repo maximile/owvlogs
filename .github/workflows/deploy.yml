@@ -26,9 +26,6 @@ jobs:
       - name: Run a one-line script
         run: ./build -o _site
   
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v1.0.5
         with:
