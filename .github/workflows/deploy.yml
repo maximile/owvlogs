@@ -31,3 +31,18 @@ jobs:
         with:
           path: _site/
           retention-days: 1
+
+#       - name: Configure GitHub Pages
+#         uses: actions/configure-pages@v2.1.3
+#         with:
+#           # GitHub token
+#           token: # default is ${{ github.token }}
+#           # Should a Pages site be enabled for the repository if not so already?
+#           enablement: # optional, default is true
+
+      - name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v1.2.3
+        with:
+          # Time in milliseconds after which to timeout and cancel the deployment (default: 10 minutes)
+          timeout: 60
+
