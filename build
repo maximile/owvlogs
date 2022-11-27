@@ -2,3 +2,20 @@
 
 import sys
 print(sys.version)
+
+def main():
+	print(sys.argv)
+	root_dir = os.path.dirname(__file__)
+	site_dir = os.path.join(root_dir, "_site")
+	os.mkdir(site_dir)
+	index_path = os.path.join(site_dir, "index.html")
+	with open(index_path, "w") as index_file:
+		index_file.write("""<html>
+<head><title>Test</title></head>
+<body><h1>Test!</h1><p>Cool!</p></body>
+</html>""")
+
+if __name__ == '__main__':
+	main()
+
+
